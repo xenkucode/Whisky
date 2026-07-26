@@ -31,8 +31,8 @@ int main(int argc, char *argv[])
     struct winsize w;
     ioctl(STDOUT_FILENO, TIOCGWINSZ, &w);
     
-    char command1[100];
-    char command2[100];
+    char command1[500];
+    char command2[500];
     sprintf(command1, "ffmpeg -i %s -vf \"scale=%d:%d,fps=%s\" frames/frame_%%06d.png", argv[1],w.ws_col,w.ws_row - 1,argv[2]);
     sprintf(command2, "ffmpeg -i %s -vn -ar 44100 -ac 2 audio.mp3", argv[1]);
     
