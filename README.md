@@ -23,7 +23,8 @@ make
 ./whisky sample.mp4 30
 ```
 ## How It Works
-1. Frames are extracted from the video and resized to fit the terminal using FFmpeg.
+1. Frames and audio are extracted from the video and resized to fit the terminal using FFmpeg.
 2. Pixel data (RGB values) for each frame is read using the stb_image library.
 3. Brightness is calculated per pixel and mapped to a corresponding ASCII character from a brightness ramp.
-4. Characters are printed to the terminal using ANSI color escape sequences.
+4. Audio is synced to frames.
+5. Characters are printed to the terminal using ANSI color escape sequences.
