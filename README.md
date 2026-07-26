@@ -1,5 +1,6 @@
 # Whisky
 Convert video files into ASCII art playback in your terminal, written in C.
+
 ![demo](demo.gif)
 
 ## Limitations
